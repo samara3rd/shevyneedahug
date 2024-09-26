@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');  
+  
+* {  
+   font-family: 'Poppins', cursive;  
+   margin: 0;  
+   padding: 0;  
+   box-sizing: border-box;  
+}  
+  
+body {  
+   color: #ffb0dd;  
+   width: 100%;  
+   height: 100vh;  
+   display: flex;  
+   flex-direction: column;  
+   align-items: center;  
+   justify-content: center;  
+   background-color: black;  
+   margin: 0;  
+   padding: 0;  
+   overflow: hidden;  
+}  
+  
+.greetings {  
+   font-size: 6rem;  
+   font-weight: 900;  
+}  
+  
+.greetings > span {  
+   animation: glow 3.5s ease-in-out infinite;  
+}  
+  
+@keyframes glow {  
+   0%, 100% {  
+      color: azure;  
+      text-shadow: 0 0 12px #ff2cff, 0 0 50px #ff2cff, 0 0 100px #ff2cff;  
+   }  
+   10%, 90% {  
+      color: black;  
+      text-shadow: none;  
+   }  
+}  
+  
+.greetings > span:nth-child(2) { animation-delay: .3s; }  
+.greetings > span:nth-child(3) { animation-delay: .6s; }  
+.greetings > span:nth-child(4) { animation-delay: .9s; }  
+.greetings > span:nth-child(5) { animation-delay: 1.2s; }  
+  
+.description {  
+   font-size: 1.5rem;  
+   margin-bottom: 20px;  
+}  
+  
+.button {  
+   text-decoration: none;  
+   font-size: 1rem;  
+   color: white;  
+   background-color: #ff2cff;  
+   padding: 10px 20px;  
+   border-radius: 50px;  
+   transition: background-color 0.3s ease, transform 0.3s ease;  
+   display: inline-block;  
+}  
+  
+.button:hover {  
+   background-color: #ff66ff;  
+   transform: scale(1.1);  
+}  
+  
+@media screen and (max-width: 574px) {  
+   .greetings {  
+      display: block;  
+      font-size: 3rem;  
+      font-weight: 500;  
+      text-align: center;  
+   }  
+   .description {  
+      font-size: 1rem;  
+   }  
+   .button {  
+      font-size: 0.5rem;  
+   }  
+   .greetings, .description, .button {  
+      position: relative;  
+      text-align: center;  
+      color: white;  
+   }  
+}
